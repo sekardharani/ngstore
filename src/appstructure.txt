@@ -1,0 +1,22 @@
+D:\Sekar\Self\selfstart\src
+├── app
+|  ├── app.component.css
+|  ├── app.component.html
+|  ├── app.component.spec.ts
+|  ├── app.component.ts
+|  └── app.module.ts
+├── appstructure.txt
+├── assets
+├── environments
+|  ├── environment.prod.ts
+|  └── environment.ts
+├── favicon.ico
+├── index.html
+├── main.ts
+├── polyfills.ts
+├── styles.css
+└── test.ts
+
+directory: 3 file: 14
+
+ignored
