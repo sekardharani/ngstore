@@ -1,31 +1,36 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { Router } from  '@angular/router';
+
+
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-  isSubmitted  =  false;
 
+export class AuthService {
   
   constructor(
     private router: Router
   ) {
     
    }
-  login(){
-    //localStorage.setItem('ACCESS_TOKEN', "access_token");
-    this.isSubmitted  =  true;
-    this.router.navigateByUrl('/home');
 
+  sendToken(token: string) {
+    localStorage.setItem("LoggedInUser", token)
   }
-  isLoggedIn(){
-    return localStorage.getItem('ACCESS_TOKEN') !== null;
+  getToken() {
+    return localStorage.getItem("LoggedInUser")
   }
-  logout(){
-    //localStorage.removeItem('ACCESS_TOKEN');
-    this.isSubmitted  =  false;
-    this.router.navigateByUrl('/login');
+  isLoggedIn() {
+    return this.getToken() !== null;
   }
+  logout() {
+    localStorage.removeItem("LoggedInUser");
+    this.router.navigate(["login"]);
+  }
+
+
+
+
+
 
 }
