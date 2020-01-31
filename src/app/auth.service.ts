@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from  '@angular/router';
+import { HttpClient } from '@angular/common/http'
 
 
 @Injectable({
@@ -7,9 +8,11 @@ import { Router } from  '@angular/router';
 })
 
 export class AuthService {
-  
+  private _loginUrl = "https://dsinzstore.herokuapp.com/member";
+
   constructor(
-    private router: Router
+    private router: Router,
+    private http: HttpClient
   ) {
     
    }
@@ -20,8 +23,14 @@ export class AuthService {
   getToken() {
     return localStorage.getItem("LoggedInUser")
   }
-  isLoggedIn() {
+  isLogged() {
     return this.getToken() !== null;
+  }
+  //isLoggedIn(user) {
+    isLoggedIn() {    
+    //return this.getToken() !== null;
+    //return this.http.post<any>(this._loginUrl, user)
+    return this.http.get<any>(this._loginUrl)
   }
   logout() {
     localStorage.removeItem("LoggedInUser");
