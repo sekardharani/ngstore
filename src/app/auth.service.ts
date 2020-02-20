@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Router } from  '@angular/router';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry, map } from 'rxjs/operators';
+
 
 
 @Injectable({
@@ -35,6 +38,28 @@ export class AuthService {
   logout() {
     localStorage.removeItem("LoggedInUser");
     this.router.navigate(["login"]);
+  } 
+  register(data): Observable<any> {
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization': 'my-auth-token'
+      })
+    };
+    let body = JSON.stringify({
+      'username': data.username,
+      'password': data.password,
+      'lastname': data.lastname,
+      'firstname': data.firstname
+  });
+    return this.http.post(this._loginUrl, body, httpOptions).pipe(
+      map((response) => {
+        console.log(response);
+        alert('register sucessfully. click ok and login');
+      }),
+      // catchError(e)
+      )
   }
 
 
