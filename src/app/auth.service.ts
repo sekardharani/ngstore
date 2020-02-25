@@ -11,7 +11,7 @@ import { catchError, retry, map } from 'rxjs/operators';
 })
 
 export class AuthService {
-  private _loginUrl = "https://dsinzstore.herokuapp.com/member";
+  private _loginUrl = "https://dsinz-api.herokuapp.com/users";
 
   constructor(
     private router: Router,

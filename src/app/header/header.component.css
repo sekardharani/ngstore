@@ -1,3 +1,9 @@
+.nav-custom-bg{
+	background-color: #fff;
+}
+.nav-custom-bg a img{
+	height: 50px;
+}
 header .main-nav{
 	position: fixed;
 	top: 0;
@@ -11,10 +17,10 @@ header .main-nav-scrolled{
 	background-color: rgba(0,0,0,0.4);
 }
 .navbar-light .navbar-nav .nav-link{
-	color: #fff;
+	color: #323332 !important;
 }
 .navbar-light .navbar-nav .active .nav-link{
-	color: #00e0d0;
+	color: #e10d0d !important;
 }
 .logout{
 	cursor: pointer;

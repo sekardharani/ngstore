@@ -1,12 +1,17 @@
-.login-form
-{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    
+
+.login-form-card{
+    margin-top: 25vh !important;
+    box-shadow: 0px 0px 10px 0px;
+    border-radius: 10px;
+}
+.login-form .row{ 
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
-.login-form .row
-{
-    margin-left: 0;
-    margin-right: 0;
+.login-card-body{
+    padding-top: 0px;
+}
+.login-form-card a{
+    color:#e10d0d;
 }

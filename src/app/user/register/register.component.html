@@ -1,49 +1,11 @@
-<main class="register-form">
-    <div class="cotainer">
+<main class="login-form cotainer-fluid register-form">
         <div class="row justify-content-center">
-            <div class="col-md-5">
-                <div class="card">
-                    <div class="card-header">Sign Up</div>
-                    <div class="card-body">
+            <div class="col-12 col-sm-6 col-md-5">
+                <div class="card login-form-card">
+                    <div class="card-body login-card-body">
                         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                            <div class="form-group row">
-                                <label class="col-md-4 col-form-label text-md-right">First Name</label>
-                                <div class="col-md-6">
-                                    <input type="text"  formControlName="firstName" class="form-control">
-                                    <small class="text-danger" *ngIf="submitted && f.firstName.errors">First Name is required</small>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-4 col-form-label text-md-right">Last Name</label>
-                                <div class="col-md-6">
-                                    <input type="text" formControlName="lastName" class="form-control">
-                                    <small class="text-danger" *ngIf="submitted && f.lastName.errors">Last Name is required</small>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-4 col-form-label text-md-right">User Name</label>
-                                <div class="col-md-6">
-                                    <input type="text" formControlName="userName" class="form-control">
-                                    <small class="text-danger" *ngIf="submitted && f.userName.errors">User Name is required</small>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-4 col-form-label text-md-right">Password</label>
-                                <div class="col-md-6">
-                                    <input type="password" formControlName="password" class="form-control">
-                                    <small class="text-danger" *ngIf="submitted && f.password.errors">Password is required</small>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 offset-md-4">
-                                    <!-- <small class="text-danger server-err" [class.d-none]="!loginForm.submitted && !loginMatch ">
-                                        Check your Username and Password</small>  -->
-                                <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary btn-custom-bg">
-                                    Register
-                                </button>
-                            </div>
+                            <div class="text-center"><img src="../../assets/dsinz-play-logo.png" /></div>
+                       
                             
                     </form>
                    
@@ -51,6 +13,4 @@
             </div>
         </div>
     </div>
-    </div>
-
 </main>

@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    padding-top: 100px;
+    background-color: #323332 !important;
+    font-family: 'Roboto';
+
 }
 .btn-custom-bg{
-    background-color: #00a65a !important;
-    border-color:#00a65a !important;
+    background-color: #e10d0d !important;
+    border-color:#e10d0d !important;
 }
